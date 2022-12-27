@@ -6,6 +6,8 @@ implement a function rand5() that returns an integer from 1 to 5 (inclusive).
 """
 
 import random
+
+
 def rand7():
     return random.randint(1, 7)
 

@@ -18,7 +18,7 @@ exists(board, "ABCCED") returns true,
 exists(board, "SEE") returns true, 
 exists(board, "ABCB") returns false
 """
-def finder(board,word,row_id,col_id,g_path = []):
+def finder(board,word,row_id,col_id,g_path :list= []):
 
     if word == "":
         return True
@@ -59,6 +59,3 @@ board = [
 print(exists(board, "ABCCED"))
 print(exists(board, "SEE") )
 print(exists(board, "ABCB")) 
-
-
-

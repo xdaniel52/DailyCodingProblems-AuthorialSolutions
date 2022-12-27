@@ -11,30 +11,31 @@ Hint: What if we enter the same URL twice?
 
 import random
 
+
 class Shortener:
     
     def __init__(self):
-        self.UrlDict = dict()
+        self.url_dict = dict()
         letters = "abcdefghijklmnopqrstuvwxyz"
-        self.alphanumericList = list(letters+letters.upper()+"0123456789") 
+        self.alphanumeric_list = list(letters+letters.upper()+"0123456789") 
         
-    def generateShortUrl(self):
+    def generate_short_url(self):
         short = ""
         while short == "":
             while len(short) < 6:
-                short += random.choice(self.alphanumericList)
-            if short in self.UrlDict.keys():
+                short += random.choice(self.alphanumeric_list)
+            if short in self.url_dict.keys():
                 short = ""
         return short
     
     def shorten(self, url):
-        if url not in self.UrlDict.keys():
-            self.UrlDict[url] = self.generateShortUrl()   
-        return self.UrlDict[url]
+        if url not in self.url_dict.keys():
+            self.url_dict[url] = self.generate_short_url()   
+        return self.url_dict[url]
     
     def restore(self, short):
-        for url in self.UrlDict:
-            if self.UrlDict[url] == short:
+        for url in self.url_dict:
+            if self.url_dict[url] == short:
                 return url
         return None
             

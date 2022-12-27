@@ -7,17 +7,16 @@ For example, given [9, 11, 8, 5, 7, 10], you should return 5, since you could bu
 at 5 dollars and sell it at 10 dollars.
 """
 
-def MaxProfit(prices):
-    minPrice = min(prices[:2])
-    maxProfit = prices[1]-prices[0]
+def max_profit(prices):
+    min_price = min(prices[:2])
+    max_prof = prices[1]-prices[0]
     for i in range(2,len(prices)):
-        if prices[i] - minPrice > maxProfit:
-            maxProfit = prices[i] - minPrice
+        if prices[i] - min_price > max_prof:
+            max_prof = prices[i] - min_price
         
-        if prices[i] < minPrice:
-            minPrice = prices[i]
+        if prices[i] < min_price:
+            min_price = prices[i]
             
-    return maxProfit
+    return max_prof
 
-
-print(MaxProfit([9, 11, 8, 5, 7, 10]))
+print(max_profit([9, 11, 8, 5, 7, 10]))

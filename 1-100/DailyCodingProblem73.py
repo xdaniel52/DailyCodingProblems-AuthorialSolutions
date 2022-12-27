@@ -9,10 +9,11 @@ class Node:
    def __init__(self, value):
       self.next = None
       self.value = value
-       
 
-class Singly_linked_list:
-    def __init__(self, head):
+
+class SinglyLinkedList:
+
+    def __init__(self, head: Node):
       self.head = head
 
     def AddValue(self, value):
@@ -51,8 +52,7 @@ class Singly_linked_list:
         self.head = current_node
         
         
-      
-linked_list = Singly_linked_list(Node(1))      
+linked_list = SinglyLinkedList(Node(1))      
 linked_list.AddValue(2)
 linked_list.AddValue(3)
 linked_list.AddValue(4)
@@ -60,7 +60,4 @@ linked_list.AddValue(4)
 linked_list.Print_list()
 linked_list.Reverse()
 linked_list.Print_list()
-
-
-
         

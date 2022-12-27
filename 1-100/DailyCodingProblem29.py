@@ -6,7 +6,7 @@ For example, given the string "([])[]({})", you should return true.
 Given the string "([)]" or "((()", you should return false
 """
 
-def Endoce(given_string : str) -> str:
+def endoce(given_string : str) -> str:
     result = ""
     letter = given_string[0]
     counter = 1
@@ -21,7 +21,7 @@ def Endoce(given_string : str) -> str:
     result+=str(counter)+letter
     return result
 
-def Decode(given_string : str) -> str:
+def decode(given_string : str) -> str:
     result = ""
     idx = 0
     for i in range(1,len(given_string)):
@@ -31,6 +31,7 @@ def Decode(given_string : str) -> str:
 
     return result
 
-print(Endoce('AAAABBBCCDAA'))
 
-print(Decode(Endoce('AAAABBBCCDAA')))
+print(endoce('AAAABBBCCDAA'))
+
+print(decode(endoce('AAAABBBCCDAA')))

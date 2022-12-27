@@ -8,7 +8,7 @@ Given a positive integer n, return the n-th perfect number.
 For example, given 1, you should return 19. Given 2, you should return 28.
 """
 
-def Find_Nth_Perfect_Number(n):
+def find_nth_perfect_number(n):
     digits = [0,0,0,0,0,0,0,0,1,9]
     idx = 1
     while idx < n:
@@ -27,8 +27,7 @@ def Find_Nth_Perfect_Number(n):
             for i in range(8,0,-1):
                 if digits[i] > 9:
                     digits[i-1] += 1
-                    digits[i] = 0
-             
+                    digits[i] = 0             
         idx+=1
     
     result = 0
@@ -38,5 +37,5 @@ def Find_Nth_Perfect_Number(n):
     
 
 for i in range(1,100):
-    print(Find_Nth_Perfect_Number(i))
+    print(find_nth_perfect_number(i))
 

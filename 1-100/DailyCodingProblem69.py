@@ -7,10 +7,8 @@ For example, if the list is [-10, -10, 5, 2], we should return 500, since that's
 
 You can assume the list has at least three integers.
 """
-def xd(x):
-    return x
 
-def FindLargestProductInList(given_list):
+def find_largest_product_ln_list(given_list):
     max1,max2,max3 = tuple(sorted(given_list[:3],reverse = True))
     min1 = max3
     min2 = max2
@@ -38,4 +36,4 @@ def FindLargestProductInList(given_list):
 
 list_of_integers = [-10, -10, 5, 2]
 
-print(FindLargestProductInList(list_of_integers))
+print(find_largest_product_ln_list(list_of_integers))

@@ -16,12 +16,13 @@ For example, given the sequence [2, 1, 5, 7, 2, 0, 5], your algorithm should pri
 """
 
 from  statistics import median
-def RunningMedianEasiest(stream):
+
+
+def running_median_easiest(stream):
     for i in range(len(stream)):
         print(median(stream[:i+1]))
 
-
-def RunningMedian(stream):
+def running_median(stream):
     l = stream.copy()
     for i in range(len(stream)):
         for j in range(i):
@@ -35,10 +36,4 @@ def RunningMedian(stream):
 
 
 a = [2, 1, 5, 7, 2, 0, 5]
-RunningMedian(a)
-
-
-
-
-
-
+running_median(a)

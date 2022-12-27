@@ -13,15 +13,15 @@ class Node:
       self.right = None
       self.value = value
       
-   def GetValue(self):
+   def get_value(self):
       if self.value.isnumeric():
           return self.value    
       else:
-          return str(eval(self.left.GetValue()+self.value+self.right.GetValue()))   
+          return str(eval(self.left.get_value()+self.value+self.right.get_value()))   
     
  
-def EvaluateTree(root):
-    return float(root.GetValue())
+def evaluate_tree(root):
+    return float(root.get_value())
 
 
 root = Node("*")
@@ -33,5 +33,5 @@ root.right.left = Node('4')
 root.right.right = Node('5')
 
 
-print(EvaluateTree(root))
+print(evaluate_tree(root))
 

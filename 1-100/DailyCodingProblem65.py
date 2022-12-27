@@ -4,7 +4,8 @@ This problem was asked by Amazon.
 Given a N by M matrix of numbers, print out the matrix in a clockwise spiral.
 """
 
-def PrintClockwise(matrix):
+def print_clockwise(matrix):
+    
     if len(matrix) > len(matrix[0]):
         iterations = len(matrix[0])*2
     else:
@@ -47,4 +48,4 @@ matrix =[[1,  2,  3,  4,  5],
          [11, 12, 13, 14, 15],
          [16, 17, 18, 19, 20]]
 
-PrintClockwise(matrix)
+print_clockwise(matrix)

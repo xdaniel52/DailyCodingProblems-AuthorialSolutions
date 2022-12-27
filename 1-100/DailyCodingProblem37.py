@@ -8,7 +8,7 @@ For example, given the set {1, 2, 3}, it should return {{}, {1}, {2}, {3}, {1, 2
 You may also use a list or array to represent a set.
 """
 
-def GetPowerSet(given_set : set):
+def get_power_set(given_set : set):
     result = [set()]
     for el in given_set:
         for i in range(len(result)):
@@ -18,5 +18,4 @@ def GetPowerSet(given_set : set):
     return result
 
 
-print(GetPowerSet({1,2,3}))
-
+print(get_power_set({1,2,3}))

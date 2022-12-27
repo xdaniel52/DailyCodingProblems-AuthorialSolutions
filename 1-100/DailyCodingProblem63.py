@@ -5,22 +5,22 @@ Given a 2D matrix of characters and a target word, write a function that returns
 the word can be found in the matrix by going left-to-right, or up-to-down.
 """
 
-def FindWordInMatrix(matrix,word):
-    wordLen = len(word)   
+def find_word_in_matrix(matrix,word):
+    word_len = len(word)   
     #checking rows       
-    for colID in range(len(matrix[0]) - wordLen+1):     
-        for rowID in range(len(matrix)):         
-            for i in range(wordLen):
-                if not matrix[rowID][colID+i] == word[i]:
+    for col_id in range(len(matrix[0]) - word_len+1):     
+        for row_id in range(len(matrix)):         
+            for i in range(word_len):
+                if not matrix[row_id][col_id+i] == word[i]:
                     break
             else:
                 return True
 
     #checking columns
-    for rowID in range(len(matrix) - wordLen+1):      
-        for colID in range(len(matrix[0])):
-            for i in range(wordLen):
-                if not matrix[rowID+i][colID] == word[i]:
+    for row_id in range(len(matrix) - word_len+1):      
+        for col_id in range(len(matrix[0])):
+            for i in range(word_len):
+                if not matrix[row_id+i][col_id] == word[i]:
                     break
             else:
                 return True
@@ -33,16 +33,16 @@ matrix =[['F', 'A', 'C', 'I'],
          ['M', 'A', 'S', 'S']]
 
 word = 'FOAM'
-print(FindWordInMatrix(matrix,word))
+print(find_word_in_matrix(matrix,word))
 
 word = 'MASS'
-print(FindWordInMatrix(matrix,word))
+print(find_word_in_matrix(matrix,word))
 
 word = 'IPBS'
-print(FindWordInMatrix(matrix,word))
+print(find_word_in_matrix(matrix,word))
 
 word = 'TEST'
-print(FindWordInMatrix(matrix,word))
+print(find_word_in_matrix(matrix,word))
 
 
 

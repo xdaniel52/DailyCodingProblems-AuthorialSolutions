@@ -6,8 +6,7 @@ Given a number in the form of a list of digits, return all possible permutations
 For example, given [1,2,3], return [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]].
 """
 
-
-def FindPermutations(given_list):
+def find_permutations(given_list):
     list_len = len(given_list)
     if list_len == 1:
         return [given_list]
@@ -16,9 +15,8 @@ def FindPermutations(given_list):
     else:
         result = []
         for i in range(list_len):
-            tmp_list = FindPermutations(given_list[:i]+given_list[i+1:])
+            tmp_list = find_permutations(given_list[:i]+given_list[i+1:])
             result+= [ [given_list[i]] + j for j in tmp_list]
         return result
 
-print(FindPermutations([1,2,3]))
-
+print(find_permutations([1,2,3]))
