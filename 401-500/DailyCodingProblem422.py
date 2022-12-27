@@ -9,13 +9,14 @@ should match that input node.
 """
 
 class Node():
+    
     def __init__(self, val):
         self.val = val
         self.left = None
         self.right = None
 
 
-def MergeBinaryTrees(tree1 :Node,tree2:Node):
+def merge_binary_trees(tree1 :Node,tree2:Node):
      result_tree = Node(tree1.val + tree2.val)
      
      if tree1.left is None and tree2.left is not None:
@@ -23,14 +24,14 @@ def MergeBinaryTrees(tree1 :Node,tree2:Node):
      elif tree1.left is not None and tree2.left is  None:
          result_tree.left = tree2.left
      elif tree1.left is not None and tree2.left is not None:
-         result_tree.left = MergeBinaryTrees(tree1.left,tree2.left)
+         result_tree.left = merge_binary_trees(tree1.left,tree2.left)
          
      if tree1.right is None and tree2.right is not None:
          result_tree.right = tree1.right
      elif tree1.right is not None and tree2.right is  None:
          result_tree.right = tree2.right
      elif tree1.right is not None and tree2.right is not None:
-         result_tree.right = MergeBinaryTrees(tree1.right,tree2.right)
+         result_tree.right = merge_binary_trees(tree1.right,tree2.right)
      
      return result_tree 
     
@@ -47,7 +48,4 @@ root2.left = Node(1)
 root2.right = Node(5)
 root2.left.left = Node(10)
 
-merged_tree = MergeBinaryTrees(root1,root2)
-
-
-
+merged_tree = merge_binary_trees(root1,root2)

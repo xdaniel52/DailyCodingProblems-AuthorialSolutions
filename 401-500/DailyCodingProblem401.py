@@ -9,25 +9,13 @@ Given an array and a permutation, apply the permutation to the array. For exampl
  given the array ["a", "b", "c"] and the permutation [2, 1, 0], return ["c", "b", "a"].
 """
 
-def ApplyPermutation(arr,perm):
+def apply_permutation(arr,perm):
     new_arr = []
     for i in range(len(arr)):
         new_arr.append(arr[perm[i]])
         
     return new_arr
 
-
 array = ["a", "b", "c"]
 permutation = [2, 1, 0]
-print(ApplyPermutation(array,permutation))
-
-
-
-
-
-
-
-
-
-
-
+print(apply_permutation(array,permutation))

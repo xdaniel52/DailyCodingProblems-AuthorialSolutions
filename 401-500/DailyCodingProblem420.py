@@ -10,7 +10,8 @@ For example, given 1, you should return 19. Given 2, you should return 28.
 
 import itertools
 
-def Find_nth_perfect_number(n):
+
+def find_nth_perfect_number(n):
     ith_perfect = 0
     
     for i in itertools.count():
@@ -26,6 +27,5 @@ def Find_nth_perfect_number(n):
                 return i
             
 
-print(Find_nth_perfect_number(1))
-print(Find_nth_perfect_number(2))
-
+print(find_nth_perfect_number(1))
+print(find_nth_perfect_number(2))

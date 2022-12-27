@@ -17,7 +17,7 @@ If [a, b] is one solution with a <= b, and [c, d] is another solution with c <= 
 If a < c OR a==c AND b < d.
 """
 
-def SieveOfEratosthenes(n):
+def sieve_of_eratosthenes(n):
     result = []
     primes = [True for i in range(n+1)]
     p = 2
@@ -33,19 +33,14 @@ def SieveOfEratosthenes(n):
             
     return result
             
-def Find_two_primes(n):
-    primes = SieveOfEratosthenes(n)
+def find_two_primes(n):
+    primes = sieve_of_eratosthenes(n)
     for prime in primes:
         if n-prime in primes:
             return [prime,n-prime]
         
     return None
 
+
 for i in range(4,16,2):
-    print(f"{i}: {Find_two_primes(i)}")
-
-
-
-
-
-
+    print(f"{i}: {find_two_primes(i)}")

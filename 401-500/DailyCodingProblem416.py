@@ -22,7 +22,7 @@ Output: 2
 It takes 1 step to move from (0, 0) to (1, 1). It takes one more step to move from (1, 1) to (1, 2).
 """
 
-def Find_Shortest_Path_In_Grid(data):
+def find_shortest_path_in_grid(data):
     steps = 0
     for i in range(1, len(data)):
         x_diff = abs(data[i][0] - data[i-1][0])
@@ -32,7 +32,7 @@ def Find_Shortest_Path_In_Grid(data):
 
 data = [(0, 0), (1, 1), (1, 2)]
 
-print(Find_Shortest_Path_In_Grid(data))
+print(find_shortest_path_in_grid(data))
 
     
 
