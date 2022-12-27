@@ -10,8 +10,7 @@ time to tuning instruments according to the diatonic scale.
 Given an integer N, write a program that returns, in order, the first N regular numbers.
 """
 
-
-def Find_Regular_Numbers(n):
+def find_regular_numbers(n):
     div=[2,3,5]
     result = {1}
     bound = 100
@@ -25,13 +24,8 @@ def Find_Regular_Numbers(n):
                     new_num = new_num*num
         result=result.union(tmp)
         bound+=100
-                
-                
+                         
     return sorted(list(result),key=lambda x: x)[:n]
 
-
-print(Find_Regular_Numbers(100))
+print(find_regular_numbers(100))
     
-    
-    
-

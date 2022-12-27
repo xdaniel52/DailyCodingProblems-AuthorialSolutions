@@ -13,7 +13,7 @@ Then the h-index would be 3, since the researcher has 3 papers with at least 3 c
 Given a list of paper citations of a researcher, calculate their h-index.
 """
 
-def h_index_calculate(citations):
+def h_index_calculate(citations :list):
     citations.sort(reverse=True)
     for i in range(len(citations)):
         if citations[i] == i+1:

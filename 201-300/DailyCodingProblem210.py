@@ -11,36 +11,26 @@ Bonus: What input n <= 1000000 gives the longest sequence?
 """
 
 
-def Test(number):
-    longest_seq_for = 0
+def test(number):
+    #longest_seq_for = 0
     longest_seq_length = 0
     for i in range(1,number):
-        seq = Collatz_seq(i)
+        seq = collatz_seq(i)
         if len(seq) > longest_seq_length:
             longest_seq_length = len(seq)
-            longest_seq_for = seq
+            #longest_seq_for = seq
             
     return longest_seq_length
 
-def Collatz_seq(n):
+def collatz_seq(n):
     result = [n]
     while n != 1:
         if n%2 == 0:
             n=n//2
         else:
             n=3*n+1
-        result.append(n)
-             
+        result.append(n)          
         
     return result
 
-
-print(Test(1000000))
-
-
-
-
-
-
-
-
+print(test(1000000))

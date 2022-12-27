@@ -15,15 +15,15 @@ eventually ending with an entry on the bottom row. For example, 1 -> 3 -> 5.
 Write a program that returns the weight of the maximum weight path.
 """
 
-def FindMaxPath(arr, last_idx = 0):
+def find_max_math(arr, last_idx = 0):
     if len(arr) == 1:
         return arr[0][last_idx]
-    max_left = FindMaxPath(arr[1:],last_idx)
-    max_right = FindMaxPath(arr[1:],last_idx+1)  
+    max_left = find_max_math(arr[1:],last_idx)
+    max_right = find_max_math(arr[1:],last_idx+1)  
     
 
     return arr[0][last_idx] + max(max_left,max_right)
 
 array = [[1], [2, 3], [1, 5, 1]]
 
-print(FindMaxPath(array))
+print(find_max_math(array))

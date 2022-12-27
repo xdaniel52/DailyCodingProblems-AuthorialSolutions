@@ -6,7 +6,7 @@ as well as 888. 678 is not a palindrome. Do not convert the integer into a strin
 """
 
 
-def CheckIntegerPalindrome(value):
+def check_integer_palindrome(value):
     arr=[]
     while value > 0:
         arr.append(value%10)
@@ -18,8 +18,8 @@ def CheckIntegerPalindrome(value):
     return True
 
 
-print(CheckIntegerPalindrome(121))
+print(check_integer_palindrome(121))
 
-print(CheckIntegerPalindrome(888))
+print(check_integer_palindrome(888))
 
-print(CheckIntegerPalindrome(678))
+print(check_integer_palindrome(678))

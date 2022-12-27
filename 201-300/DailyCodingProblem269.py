@@ -15,7 +15,7 @@ For example, given the string .L.R....L, you should return LL.RRRLLL.
 Given the string ..R...L.L, you should return ..RR.LLLL.
 """
 
-def Find_Domino_Orientation(s):
+def find_domino_orientation(s):
     init = list(s)
     result = init.copy()
     r_idx = None
@@ -44,6 +44,6 @@ def Find_Domino_Orientation(s):
     return "".join(result)
 
 
-print(Find_Domino_Orientation(".L.R....L"))
+print(find_domino_orientation(".L.R....L"))
 
-print(Find_Domino_Orientation("..R...L.L"))
+print(find_domino_orientation("..R...L.L"))

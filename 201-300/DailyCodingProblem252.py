@@ -6,10 +6,11 @@ For example, 4 / 13 can be represented as 1 / 4 + 1 / 18 + 1 / 468.
 
 Create an algorithm to turn an ordinary fraction a / b, where a < b, into an Egyptian fraction.
 """
+
 import math
 
 
-def Find_Egyption_Fraction(frac:tuple):
+def find_egyption_fraction(frac:tuple):
     result=[]
     n = frac[0]
     d = frac[1]
@@ -21,5 +22,4 @@ def Find_Egyption_Fraction(frac:tuple):
         
     return result
                       
-
-print(Find_Egyption_Fraction((4,13)))
+print(find_egyption_fraction((4,13)))

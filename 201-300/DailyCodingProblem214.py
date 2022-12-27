@@ -6,7 +6,7 @@ Given an integer n, return the length of the longest consecutive run of 1s in it
 For example, given 156, you should return 3.
 """
 
-def LenLongestSeqOf1(n):
+def len_longest_seq_of_ones(n):
     n_str = format(156,"b")
     max_len = 0
     counter = 0
@@ -24,4 +24,4 @@ def LenLongestSeqOf1(n):
         
     return max_len
     
-print(LenLongestSeqOf1(156))
+print(len_longest_seq_of_ones(156))

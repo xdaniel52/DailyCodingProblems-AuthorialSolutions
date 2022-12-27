@@ -5,7 +5,7 @@ Given an integer, find the next permutation of it in absolute order. For example
 the next permutation would be 49578.
 """
 
-def FindNextAbsolutePermutation(number):
+def find_next_absolute_permutation(number):
     tmp_number = number
     arr=[]
     while tmp_number > 0:
@@ -25,7 +25,7 @@ def FindNextAbsolutePermutation(number):
     
     return result
     
-print(FindNextAbsolutePermutation(48975))
+print(find_next_absolute_permutation(48975))
     
     
 

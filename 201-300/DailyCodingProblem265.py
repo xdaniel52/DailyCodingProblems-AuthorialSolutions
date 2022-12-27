@@ -11,7 +11,7 @@ should get paid.
 For example, given [10, 40, 200, 1000, 60, 30], you should return [1, 2, 3, 4, 2, 1]. 
 """
 
-def Calc_bonuses(arr):
+def calc_bonuses(arr):
     bonuses = [1 for _ in range(len(arr))]
     idx = 0
     for i in range(1, len(arr)):
@@ -24,4 +24,4 @@ def Calc_bonuses(arr):
         
     return bonuses
     
-print(Calc_bonuses([10, 40, 200, 1000, 60, 30]))
+print(calc_bonuses([10, 40, 200, 1000, 60, 30]))

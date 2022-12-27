@@ -7,7 +7,7 @@ of distinct elements, return a fixed point, if one exists. Otherwise, return Fal
 For example, given [-6, 0, 2, 40], you should return 2. Given [1, 5, 7, 8], you should return False
 """
 
-def Find_Fixed_Point(arr):
+def find_fixed_point(arr):
     
     left_idx = 0
     right_idx = len(arr)-1
@@ -27,6 +27,6 @@ def Find_Fixed_Point(arr):
     else:
         return False
 
-print(Find_Fixed_Point([-6, 0, 2, 40]))
+print(find_fixed_point([-6, 0, 2, 40]))
 
-print(Find_Fixed_Point([1, 5, 7, 8]))
+print(find_fixed_point([1, 5, 7, 8]))

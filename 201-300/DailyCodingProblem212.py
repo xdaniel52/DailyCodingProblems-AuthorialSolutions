@@ -8,20 +8,20 @@ Given a column number, return its alphabetical column id.
 For example, given 1, return "A". Given 27, return "AA".
 """
 
-def ColumnName(colNumber):
+def column_name(col_number):
     name = ""
-    colNumber-=1
-    n = colNumber%26
-    colNumber=(colNumber - n)  // 26
+    col_number-=1
+    n = col_number%26
+    col_number=(col_number - n)  // 26
     
-    if colNumber > 0:
-        name+=ColumnName(colNumber)
+    if col_number > 0:
+        name+=column_name(col_number)
     return name+chr(65 + n) 
 
 
 
-print(ColumnName(1))
-print(ColumnName(27))
+print(column_name(1))
 
-#for i in range(1,27*26+2 ):
-#   print(ColumnName(i))
+print(column_name(26))
+print(column_name(27))
+print(column_name(28))

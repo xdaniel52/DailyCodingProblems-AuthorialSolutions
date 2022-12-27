@@ -7,7 +7,7 @@ using only O(1) space.
 
 def nth_fib(n):
     a=b=1
-    for i in range(2,n):
+    for _ in range(2,n):
         a,b = b,a+b          
     return b
 

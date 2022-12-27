@@ -20,7 +20,7 @@ For the example above, the friend groups would be {0, 1, 2, 5}, {3, 6}, {4}.
 Given a friendship list such as the one above, determine the number of friend groups in the class
 """
 
-def Find_number_of_friend_groups(arr:dict):
+def find_number_of_friend_groups(arr:dict):
     groups = [ [i] for i in arr.keys()]  
     for st in arr:
         for fr in arr[st]:
@@ -32,7 +32,6 @@ def Find_number_of_friend_groups(arr:dict):
 
     return len(set(id(g) for g in groups))
 
- 
 
 data = {0: [1, 2],
  1: [0, 5],
@@ -42,4 +41,4 @@ data = {0: [1, 2],
  5: [1],
  6: [3]} 
 
-print(Find_number_of_friend_groups(data))
+print(find_number_of_friend_groups(data))

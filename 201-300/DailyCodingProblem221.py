@@ -6,7 +6,7 @@ or the sum of unique powers of 7. The first few sevenish numbers are 1, 7, 8, 49
 Create an algorithm to find the nth sevenish number.
 """
 
-def Sevenish(n):
+def sevenish(n):
     arr=[1]
     power_num = 1
     while len(arr) < n:
@@ -19,7 +19,7 @@ def Sevenish(n):
     return arr[n-1]
 
 for i in range(1,100):
-    print(Sevenish(i))
+    print(sevenish(i))
 
 
 

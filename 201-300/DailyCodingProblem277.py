@@ -22,7 +22,7 @@ Write a program that takes in an array of integers representing byte values,
 """
 import numpy as np
 
-def Check_UTF8_Encoding(arr):
+def check_UTF8_encoding(arr):
     if len(arr) % 8 != 0:
         return False
     bytes_arr = list(np.reshape(arr, (len(arr)//8,8)))
@@ -44,27 +44,12 @@ def Check_UTF8_Encoding(arr):
     return True
 
 
-print(Check_UTF8_Encoding([1,1,1,0,0,0,1,0,1,0,0,0,0,0,1,0,1,0,1,0,1,1,0,0]))
+print(check_UTF8_encoding([1,1,1,0,0,0,1,0,1,0,0,0,0,0,1,0,1,0,1,0,1,1,0,0]))
 
-print(Check_UTF8_Encoding([1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,1,0,1,0,1,1,0,0]))
+print(check_UTF8_encoding([1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,1,0,1,0,1,1,0,0]))
 
-print(Check_UTF8_Encoding([1,1,1,0,0,0,1,0,1,0,0,0,0,0,1,0,1,1,1,0,1,1,0,0]))
+print(check_UTF8_encoding([1,1,1,0,0,0,1,0,1,0,0,0,0,0,1,0,1,1,1,0,1,1,0,0]))
 
-print(Check_UTF8_Encoding([1,1,1,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,1,0,1,1,0,0]))
+print(check_UTF8_encoding([1,1,1,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,1,0,1,1,0,0]))
 
-print(Check_UTF8_Encoding([0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(check_UTF8_encoding([0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0]))

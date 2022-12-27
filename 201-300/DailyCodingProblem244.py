@@ -13,7 +13,7 @@ Implement this algorithm.
 Bonus: Create a generator that produces primes indefinitely (that is, without taking N as an input).
 """
 
-def Sieve_of_Eratosthenes(n):
+def sieve_of_eratosthenes(n):
     primes = []
     numbers=[True for i in range(0,n)]
     numbers[0] =  numbers[1] = False
@@ -25,7 +25,7 @@ def Sieve_of_Eratosthenes(n):
 
     return primes
 
-print(Sieve_of_Eratosthenes(300))
+print(sieve_of_eratosthenes(300))
 
 
 

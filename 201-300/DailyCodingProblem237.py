@@ -13,67 +13,64 @@ Given a k-ary tree, determine whether it is symmetric.
 """
 
 class Node:
-    def __init__(self, value, k):  
+    def __init__(self, value, children_num):  
         self.value = value
-        self.children = [None for i in range(k)]
-    def Add(self, idx, node):
+        self.children = [None for _ in range(children_num)]
+    def add(self, idx, node):
         self.children[idx] = node
 
-def Check_Symmetricity(root, k):
+def check_symmetricity(root :Node, children_num):
     tree = root
-    for i in range(k // 2):
-        Tree_Reverse(tree.children[-i-1],k)
-        if not Nodes_Comparer(tree.children[i],tree.children[-i-1],k):
+    for i in range(children_num // 2):
+        tree_reverse(tree.children[-i-1], children_num)
+        if not nodes_comparer(tree.children[i], tree.children[-i-1], children_num):
             return False
         
     return True
     
-        
-    
-def Tree_Reverse(root, k):
+def tree_reverse(root :Node, children_num):
     if root is None:
         return
     else:
-        for i in range(k // 2):
+        for i in range(children_num // 2):
             root.children[i], root.children[-i-1] = root.children[-i-1], root.children[i]
-            Tree_Reverse(root.children[i],k)
-            Tree_Reverse(root.children[-i-1],k)
+            tree_reverse(root.children[i], children_num)
+            tree_reverse(root.children[-i-1], children_num)
 
-def Nodes_Comparer(n1, n2, k):
-    if n1 is None and n2 is None:
+def nodes_comparer(node1 :Node, node2 :Node, children_num):
+    if node1 is None and node2 is None:
         return True
-    elif (n1 is None and n2 is not None) \
-      or (n1 is not None and n2 is None) \
-      or n1.value != n2.value:
+    elif (node1 is None and node2 is not None) \
+      or (node1 is not None and node2 is None) \
+      or node1.value != node2.value:
         return False  
     else:
-        for i in range(k):
-            if not Nodes_Comparer(n1.children[i],n2.children[i],k):
+        for i in range(children_num):
+            if not nodes_comparer(node1.children[i], node2.children[i], children_num):
                 return False
     return True
             
-            
-            
+                     
 root = Node(4,3)
-root.Add(0, Node(3,3))          
-root.Add(1, Node(5,3)) 
-root.Add(2, Node(3,3)) 
-root.children[0].Add(0, Node(9,3)) 
-root.children[2].Add(2, Node(9,3)) 
-print(Check_Symmetricity(root,3))    
+root.add(0, Node(3,3))          
+root.add(1, Node(5,3)) 
+root.add(2, Node(3,3)) 
+root.children[0].add(0, Node(9,3)) 
+root.children[2].add(2, Node(9,3)) 
+print(check_symmetricity(root,3))    
   
 
 root = Node(4,2)
-root.Add(0, Node(5,2))           
-root.Add(1, Node(5,2)) 
-root.children[0].Add(0, Node(6,2)) 
-root.children[1].Add(1, Node(6,2)) 
-print(Check_Symmetricity(root,2))           
+root.add(0, Node(5,2))           
+root.add(1, Node(5,2)) 
+root.children[0].add(0, Node(6,2)) 
+root.children[1].add(1, Node(6,2)) 
+print(check_symmetricity(root,2))           
       
       
 root = Node(4,2)
-root.Add(0, Node(5,2))           
-root.Add(1, Node(5,2)) 
-root.children[0].Add(0, Node(6,2)) 
-root.children[1].Add(1, Node(5,2))   
-print(Check_Symmetricity(root,2)) 
+root.add(0, Node(5,2))           
+root.add(1, Node(5,2)) 
+root.children[0].add(0, Node(6,2)) 
+root.children[1].add(1, Node(5,2))   
+print(check_symmetricity(root,2)) 
