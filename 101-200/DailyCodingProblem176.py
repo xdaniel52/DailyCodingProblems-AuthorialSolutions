@@ -8,7 +8,7 @@ For example, given s1 = abc and s2 = bcd, return true since we can map a to b, b
 Given s1 = foo and s2 = bar, return false since the o cannot map to two characters.
 """
 
-def Check_Mapping(s1,s2):
+def check_mapping(s1,s2):
     
     if len(s1) != len(s2):
         return False
@@ -23,13 +23,11 @@ def Check_Mapping(s1,s2):
                 
     return True
 
-
-
 s1 = "abc" 
 s2 = "bcd"
-print(Check_Mapping(s1,s2))
+print(check_mapping(s1,s2))
 
 s1 = "foo" 
 s2 = "bar"
-print(Check_Mapping(s1,s2))
+print(check_mapping(s1,s2))
 

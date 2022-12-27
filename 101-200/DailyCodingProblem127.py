@@ -29,45 +29,45 @@ class Node:
 class NumberAsLinkedList:
     def __init__(self, number):
         self.first = Node(number%10)
-        currentNode = self.first
-        number=number // 10
+        current_node = self.first
+        number = number // 10
         while number > 0:
-            currentNode.next = Node(number%10)
-            currentNode = currentNode.next
-            number=number // 10
+            current_node.next = Node(number%10)
+            current_node = current_node.next
+            number = number // 10
 
     def __str__(self):
         result = str(self.first.value)
-        currentNode = self.first.next
-        while currentNode != None:
-            result += " -> "+str(currentNode.value)
-            currentNode = currentNode.next          
+        current_node = self.first.next
+        while current_node != None:
+            result += " -> "+str(current_node.value)
+            current_node = current_node.next          
         return result
     
     
-def SumNumbers(num1,num2):
+def sum_numbers(num1 :Node,num2 :Node):
     result = NumberAsLinkedList(0)
-    currentNode = result.first
-    currentNode1 = num1.first
-    currentNode2 = num2.first
-    while not (currentNode1 == None and currentNode2 == None):
-        currentNode.next = Node(0)
-        if currentNode1 != None:
-           currentNode.value += currentNode1.value
-           currentNode1 = currentNode1.next
+    current_node = result.first
+    current_node1 = num1.first
+    current_node2 = num2.first
+    while not (current_node1 == None and current_node2 == None):
+        current_node.next = Node(0)
+        if current_node1 != None:
+           current_node.value += current_node1.value
+           current_node1 = current_node1.next
            
-        if currentNode2 != None:
-           currentNode.value += currentNode2.value
-           currentNode2 = currentNode2.next
+        if current_node2 != None:
+           current_node.value += current_node2.value
+           current_node2 = current_node2.next
            
-        if currentNode.value > 9:
-           currentNode.value = currentNode.value%10
-           currentNode.next.value = 1
+        if current_node.value > 9:
+           current_node.value = current_node.value%10
+           current_node.next.value = 1
            
-        if currentNode1 == None and currentNode2 == None and currentNode.next.value == 0:           
-           currentNode.next = None 
+        if current_node1 == None and current_node2 == None and current_node.next.value == 0:           
+           current_node.next = None 
         else:
-           currentNode = currentNode.next
+           current_node = current_node.next
         
     return result
     
@@ -77,6 +77,4 @@ print()
 
 number1 = NumberAsLinkedList(99)
 number2 = NumberAsLinkedList(25)
-print(SumNumbers(number1,number2))
-
-
+print(sum_numbers(number1,number2))

@@ -20,11 +20,11 @@ class Node:
       self.value = value
        
       
-def PrintTreeValues(root):
+def print_tree_values(root):
     level = 0
     elements = []
     while True:      
-        if not PrintNodeLevel(root,level, elements):
+        if not print_node_level(root,level, elements):
             break
         level+=1
         
@@ -34,18 +34,18 @@ def PrintTreeValues(root):
     
     print(result[:-2])     
 
-def PrintNodeLevel(node,level,elements):
+def print_node_level(node,level,elements):
     if level == 0:
         elements.append(node.value)
         return True
     else:   
         level-=1
         if node.left != None:
-            result1 = PrintNodeLevel(node.left,level,elements)
+            result1 = print_node_level(node.left,level,elements)
         else:
             result1 = False
         if node.right != None:
-            result2 = PrintNodeLevel(node.right,level,elements)
+            result2 = print_node_level(node.right,level,elements)
         else:
             result2 = False   
         if result1 or result2:
@@ -53,13 +53,12 @@ def PrintNodeLevel(node,level,elements):
         else:
             return False
     
-
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)
 root.right.left = Node(4)
 root.right.right = Node(5)
-PrintTreeValues(root)
+print_tree_values(root)
 
 root = Node(1)
 root.left = Node(2)
@@ -70,4 +69,4 @@ root.right.left = Node(6)
 root.right.right = Node(7)
 root.right.right.right = Node(8)
 root.right.right.right.right = Node(9)
-PrintTreeValues(root)
+print_tree_values(root)

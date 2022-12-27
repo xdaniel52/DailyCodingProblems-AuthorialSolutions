@@ -20,30 +20,29 @@ and
 return 6.
 """
 
-def Calculate_Intersection(rec1,rec2):
+def calculate_intersection(rec1,rec2):
     
-    rec1left = rec1["top_left"][0]
-    rec1rigth = rec1["top_left"][0] + rec1["dimensions"][0]
-    rec2left = rec2["top_left"][0]
-    rec2rigth = rec2["top_left"][0] + rec2["dimensions"][0]
+    rec1_left = rec1["top_left"][0]
+    rec1_rigth = rec1["top_left"][0] + rec1["dimensions"][0]
+    rec2_left = rec2["top_left"][0]
+    rec2_rigth = rec2["top_left"][0] + rec2["dimensions"][0]
 
-    width = min(rec1rigth,rec2rigth) - max(rec1left,rec2left)
+    width = min(rec1_rigth,rec2_rigth) - max(rec1_left,rec2_left)
     
     if width<=0:
         return 0
     
-    rec1top = rec1["top_left"][1]
-    rec1bot = rec1["top_left"][1] - rec1["dimensions"][1]
-    rec2top = rec2["top_left"][1]
-    rec2bot = rec2["top_left"][1] - rec2["dimensions"][1]   
+    rec1_top = rec1["top_left"][1]
+    rec1_bot = rec1["top_left"][1] - rec1["dimensions"][1]
+    rec2_top = rec2["top_left"][1]
+    rec2_bot = rec2["top_left"][1] - rec2["dimensions"][1]   
     
-    height = min(rec1top,rec2top) - max(rec1bot,rec2bot)
+    height = min(rec1_top,rec2_top) - max(rec1_bot,rec2_bot)
     
     if height<=0:
         return 0
 
     return width*height
-
 
 
 rectangle1={
@@ -56,6 +55,6 @@ rectangle2={
     "dimensions": (4, 3) 
 }  
     
-print(Calculate_Intersection(rectangle1,rectangle2))
+print(calculate_intersection(rectangle1,rectangle2))
 
 

@@ -33,7 +33,7 @@ class SingleLinkedList:
         return result
     
     
-def Rotate_List(list,k):
+def rotate_list(list :SingleLinkedList,k):
     node = list.head
     list_len = 1
     while node.next != None:
@@ -62,7 +62,7 @@ list.Add(5)
     
 print(list)
 
-Rotate_List(list,2)
+rotate_list(list,2)
 
 print(list)
     
@@ -74,6 +74,6 @@ list.Add(5)
   
 print(list)
 
-Rotate_List(list,3)
+rotate_list(list,3)
 
 print(list)

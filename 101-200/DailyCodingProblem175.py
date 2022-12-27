@@ -22,8 +22,8 @@ One instance of running this Markov chain might produce { 'a': 3012, 'b': 1656, 
 """
 from random import random
 
-def RunMarkovChain(start,transition_probabilities,num_steps):
-    prob_dict = MakeDict(transition_probabilities)
+def run_markov_chain(start,transition_probabilities,num_steps):
+    prob_dict = make_dict(transition_probabilities)
     counter = {}
     for key in prob_dict.keys():
         counter[key] = 0
@@ -40,7 +40,7 @@ def RunMarkovChain(start,transition_probabilities,num_steps):
     return counter
 
 
-def MakeDict(transition_probabilities):
+def make_dict(transition_probabilities):
     result = {}
     curr_prob = 0
     for t in transition_probabilities:
@@ -67,4 +67,4 @@ transition_probabilities = \
   ('c', 'c', 0.5)
 ]
     
-print(RunMarkovChain(start,transition_probabilities,num_steps))
+print(run_markov_chain(start,transition_probabilities,num_steps))

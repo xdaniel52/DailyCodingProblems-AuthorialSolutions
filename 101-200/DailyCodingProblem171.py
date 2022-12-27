@@ -17,8 +17,7 @@ Return it as a pair of (start, end) timestamps. You can assume
 the building always starts off and ends up empty, i.e. with 0 people inside
 """
 
-
-def Find_Busiest_Period(data):
+def find_busiest_period(data):
     best_end_id = 1
     busiest_count = data[0]['count']
     current_count = data[0]['count']
@@ -33,7 +32,6 @@ def Find_Busiest_Period(data):
             
     return (data[best_end_id-1]['timestamp'],data[best_end_id]['timestamp'])        
 
-
 entries_exits = []
 entries_exits.append({"timestamp": 1526579928, "count": 3, "type": "enter"})
 entries_exits.append({"timestamp": 1526580382, "count": 2, "type": "exit"})
@@ -42,4 +40,4 @@ entries_exits.append({"timestamp": 1526600071, "count": 2, "type": "enter"})
 entries_exits.append({"timestamp": 1526612384, "count": 2, "type": "exit"})
 entries_exits.append({"timestamp": 1526614755, "count": 2, "type": "exit"})
 
-print(Find_Busiest_Period(entries_exits))
+print(find_busiest_period(entries_exits))

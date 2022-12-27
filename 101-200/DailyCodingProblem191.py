@@ -13,10 +13,10 @@ The intervals are not necessarily sorted in any order.
 """
 
 
-def NumberOfOverlapping(array):
+def number_of_overlapping(array :list):
     counter = 0
     while True:
-        overlappings = [1 for i in range(len(array))]
+        overlappings = [1 for _ in range(len(array))]
         max_idx = 1
         for i in range(len(array)):
             for j in range(len(array)):
@@ -38,5 +38,4 @@ def NumberOfOverlapping(array):
 
 intervals = [(7, 9), (2, 4), (5, 8)]
 
-print(NumberOfOverlapping(intervals))
-
+print(number_of_overlapping(intervals))

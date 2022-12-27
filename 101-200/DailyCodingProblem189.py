@@ -9,7 +9,7 @@ the longest subarray of distinct elements is [5, 2, 3, 4, 1].
 """
 
 
-def FindLengthSubArray(array):
+def find_length_sub_array(array):
     sub =[]
     max_len = 0
     for e in array:
@@ -19,10 +19,8 @@ def FindLengthSubArray(array):
         max_len = max(max_len,len(sub))
     return max_len
 
-
 test_array =  [5, 1, 3, 5, 2, 3, 4, 1]
-print(FindLengthSubArray(test_array))
-
+print(find_length_sub_array(test_array))
 
 test_array =  [1,2,3,4,3,1,2,4,5,6,3,6]
-print(FindLengthSubArray(test_array))
+print(find_length_sub_array(test_array))

@@ -16,22 +16,22 @@ class SingleLinkedList:
     def __init__(self, value):
         self.head = Node(value)
    
-    def Add(self, value):
-        currentNode = self.head
-        while currentNode.next != None:
-            currentNode = currentNode.next 
-        currentNode.next = Node(value)     
+    def add(self, value):
+        current_node = self.head
+        while current_node.next != None:
+            current_node = current_node.next 
+        current_node.next = Node(value)     
         
     def __str__(self):
         result = str(self.head.value)
-        currentNode = self.head.next
-        while currentNode != None:
-            result += " -> "+str(currentNode.value)
-            currentNode = currentNode.next          
+        current_node = self.head.next
+        while current_node != None:
+            result += " -> "+str(current_node.value)
+            current_node = current_node.next          
         return result
   
         
-def SwapEveryTwoNodes(head):
+def swap_every_two_nodes(head :Node):
     first_node = head
     second_node = first_node.next
     return_node = first_node
@@ -46,29 +46,28 @@ def SwapEveryTwoNodes(head):
     
     return return_node
 
-
 #test1
 linked_list = SingleLinkedList(1)
-linked_list.Add(2)
-linked_list.Add(3)
-linked_list.Add(4)
+linked_list.add(2)
+linked_list.add(3)
+linked_list.add(4)
 print(linked_list)
 
-SwapEveryTwoNodes(linked_list.head)
+swap_every_two_nodes(linked_list.head)
 
 print(linked_list)
 
 #test2
 linked_list = SingleLinkedList(1)
-linked_list.Add(2)
-linked_list.Add(3)
-linked_list.Add(4)
-linked_list.Add(5)
-linked_list.Add(6)
-linked_list.Add(7)
+linked_list.add(2)
+linked_list.add(3)
+linked_list.add(4)
+linked_list.add(5)
+linked_list.add(6)
+linked_list.add(7)
 print(linked_list)
 
-SwapEveryTwoNodes(linked_list.head)
+swap_every_two_nodes(linked_list.head)
 
 print(linked_list)
 

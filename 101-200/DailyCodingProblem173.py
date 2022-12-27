@@ -24,17 +24,15 @@ it should become:
 You can assume keys do not contain dots in them, i.e. no clobbering will occur.
 """
 
-
-def Dict_Flatten(dictionary, prefix=""):
+def dict_flatten(dictionary, prefix=""):
     result = {}
     for key in dictionary.keys():
         if type(dictionary[key]) is dict:
-            result.update(Dict_Flatten(dictionary[key],prefix+key+'.'))
+            result.update(dict_flatten(dictionary[key],prefix+key+'.'))
         else:
             result[prefix+key] = dictionary[key]
             
     return result
-
 
 test_dict = \
 {
@@ -47,4 +45,4 @@ test_dict = \
     }
 }
 
-print(Dict_Flatten(test_dict))
+print(dict_flatten(test_dict))

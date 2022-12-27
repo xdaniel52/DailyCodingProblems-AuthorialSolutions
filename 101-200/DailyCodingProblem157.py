@@ -7,7 +7,7 @@ For example, carrace should return true, since it can be rearranged to form race
 which is a palindrome. daily should return false, since there's no rearrangement that can form a palindrome.
 """
 
-def Determine(string):
+def determine_if_palindrome(string):
     letter_dict = {}
     for l in string:
         if l in letter_dict.keys():
@@ -27,7 +27,7 @@ def Determine(string):
 
 
 string1 = "carrace"
-print(Determine(string1))
+print(determine_if_palindrome(string1))
 
 string2 = "daily"
-print(Determine(string2))
+print(determine_if_palindrome(string2))

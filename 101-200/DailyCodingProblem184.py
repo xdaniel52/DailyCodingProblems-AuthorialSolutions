@@ -7,7 +7,7 @@ For example, given the numbers [42, 56, 14], return 14
 """
 
 
-def GCD(arr):
+def gcd(arr):
     denominators = []
     for i in range(1,arr[0]//2):
         if arr[0]%i==0:
@@ -23,7 +23,5 @@ def GCD(arr):
                      
     return denominators[-1]
 
-
-
-print(GCD([42, 56, 14]))
+print(gcd([42, 56, 14]))
                 
