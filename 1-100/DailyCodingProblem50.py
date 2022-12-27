@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Suppose an arithmetic expression is given as a binary tree. Each leaf is an integer 
 and each internal node is one of '+', '−', '∗', or '/'.
@@ -19,7 +18,6 @@ class Node:
       else:
           return str(eval(self.left.get_value()+self.value+self.right.get_value()))   
     
- 
 def evaluate_tree(root):
     return float(root.get_value())
 
@@ -32,6 +30,4 @@ root.left.right = Node('2')
 root.right.left = Node('4')
 root.right.right = Node('5')
 
-
 print(evaluate_tree(root))
-
