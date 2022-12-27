@@ -34,7 +34,6 @@ class Node():
         return first or second
 
 
-
 root = Node(8)
 root.left = Node(4)
 root.right = Node(13)
@@ -43,8 +42,3 @@ root.left.right = Node(6)
 root.right.right = Node(19)
 
 print(root.find_sum_path(18))
-
-
-
-
-
